@@ -71,16 +71,16 @@ class FinancialCalculator {
 
                switch (response) {
                    case "Y":
-                       PICK = 5;
+                       goToMenu();
                        break;
                    case "N":
                        BigDecimal money = getDataFromUser("Введите сумму пополнения: " , false);
                        expenses.replace(day , money);
-                       PICK = 5;
+                       goToMenu();
                        break;
                    default:
                        System.out.println("Неккоректные данные!");
-                       PICK = 5;
+                       goToMenu();
                        return;
                }
        }
